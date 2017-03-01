@@ -157,7 +157,7 @@ export default Events;
 
 - Components: The Events component is a child of EventFeed and EventFeed renders in or is a child of App component. Input component is a child of App. The data from the input fields in Input is passed on using refs to pass the zipcode entered into the getEvents function. This is then posted to Jambase via an external API call using axios. The Events array of objects found within the response data from the API call is passed to state as events. events from state are passed on to the Events component from the App component and the getEvents method is passed to the Input component where it is called on click of the Search button or on enter, with the zipcode value entered, as an argument.
 
-- By mapping over the Events array from the response data from the axios API call made to Jambase , I was able to build an Event component for each concert listed. I had to map over Artists for each
+- By mapping over the Events array from the response data from the axios API call made to Jambase , I was able to build an Event component for each concert listed. I had to map over an array Artists for each element in the events array, essentially a nested map.
 
 -Additionally, I was able to add conditional rendering that would display a link for a venue or ticket url if given, and if not would render 'No venue website ' or  'No website to buy tickets ' respectively.
 
@@ -171,15 +171,15 @@ GA and Hakuna Matata and Erick were my main contributors helping me through road
 
 - There were initial successes creating this concert list web app using React Native. However, due to Xcode 7 and Operating System incompatibilities (not due to code), the xcode iphone simulator got stuck at build failures. Upgrading my OS and xcode in the middle of a project, was a risky proposition. I do hope to convert this into a react native app, with geolocation capabilities as soon as possible.
 
-- As mentioned, I would like to add location within the React Native mobile app for each concert listed from the Jambase API call, onto Apple or Google maps and help give directions to each concert venue. 
+- As mentioned, I would like to add location within the React Native mobile app for each concert listed from the Jambase API call, onto Apple or Google maps and help give directions to each concert venue.
 
-- Be able to filter or search Meetup Events by keywords from the event details, one of the names of the people going, or date.
+- Be able to filter or search for concert by keywords such as artist name, venue name and genre of music.
 
-- I would like to add more dynamic styling  and will look to make those improvements in the coming week.
+- I would like to add more dynamic and slick styling  and will look to make those improvements in the future.
 
 
 ## Authors
 
 - Karthik Meda
 - General Assembly
-- Patrick Andre
+- Hakuna Matata Cohory
