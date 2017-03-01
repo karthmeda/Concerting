@@ -153,15 +153,17 @@ export default Events;
 
 - The initial implementation/idea was to use React Native to build a concerts list mobile web app that uses geolocation and zipcode to search for concert Events using the Jambase API and gives directions to each concert. However for now, it is a concert list web app the reasons for which, will be explained in the Complications/Future Improvements Section.
 
-- I decided to use data from the API call using zipcode on the Jambase API, as it gave a robust list of concerts at smaller and mid sized venues within a 10 mile radius of a given zip code , and allows one to discover and explore new acts and artists. There are already multiple apps and websites that allow users to seach for concerts by artist and start and end dates. I wanted my app/website to be more for users interested in exploring new acts playing at smaller to mid sized venues near them.
+- I decided to use data from the API call using zipcode on the Jambase API, as it gave a robust list of concerts at smaller and mid sized venues within a 10 mile radius of a given zip code , and allows one to discover and explore new acts and artists. It has listings similar to publications such as  Village Voice and Timeout but with the ability to search for concerts across the U.S. There are already multiple apps and websites that allow users to search for concerts by artist and start and end dates. I wanted my app/website to be more for users interested in exploring new acts playing at smaller to mid sized venues near them.
 
 - Components: The Events component is a child of EventFeed and EventFeed renders in or is a child of App component. Input component is a child of App. The data from the input fields in Input is passed on using refs to pass the zipcode entered into the getEvents function. This is then posted to Jambase via an external API call using axios. The Events array of objects found within the response data from the API call is passed to state as events. events from state are passed on to the Events component from the App component and the getEvents method is passed to the Input component where it is called on click of the Search button or on enter, with the zipcode value entered, as an argument.
 
 - By mapping over the Events array from the response data from the axios API call made to Jambase , I was able to build an Event component for each concert listed. I had to map over an array Artists for each element in the events array, essentially a nested map.
 
--Additionally, I was able to add conditional rendering that would display a link for a venue or ticket url if given, and if not would render 'No venue website ' or  'No website to buy tickets ' respectively.
+- Additionally, I was able to add conditional rendering that would display a link for a venue or ticket url if given, and if not would render 'No venue website ' or  'No website to buy tickets ' respectively.
 
 - After getting feedback from friends and classmates, from a user experience perspective they did not see the benefit of having a user login, and felt it would slow down the process of obtaining concert info and buying tickets.
+
+
 
 
 ## Contributors
