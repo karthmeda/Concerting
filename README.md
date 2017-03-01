@@ -182,4 +182,4 @@ GA and Hakuna Matata and Erick were my main contributors helping me through road
 
 - Karthik Meda
 - General Assembly
-- Hakuna Matata Cohory
+- Hakuna Matata Cohort
